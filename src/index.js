@@ -59,5 +59,3 @@ export const callable = input => {
   outputProxy = new Proxy(fn, fnHandler)
   return outputProxy
 }
-
-const questionToAnswer = callable({ foo: 'bar', [defaultsTo]: 42 })
