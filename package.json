@@ -13,7 +13,7 @@
     "proxy"
   ],
   "author": "Tim Kutscha",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
     "@types/jest": "^29.2.6",
