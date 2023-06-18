@@ -38,7 +38,7 @@ export const callable = input => {
         return Reflect.get(target, prop, receiver)
       }
 
-      if (!input[prop] && input[defaultsTo]) {
+      if (!input.hasOwnProperty(prop) && input[defaultsTo] !== undefined) {
         return input[defaultsTo]
       }
 

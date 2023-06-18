@@ -77,6 +77,7 @@ describe('Make an object callable', () => {
 })
 
 const questionToAnswer = callable({ foo: 'bar', [defaultsTo]: 42 })
+const questionToAnswerFalsyDefault = callable({ foo: 'bar', [defaultsTo]: '' })
 const questionToMaybeAnswer = callable({ foo: 'bar' })
 
 describe('A callable object can have a default value', () => {
@@ -86,6 +87,10 @@ describe('A callable object can have a default value', () => {
 
   test('default value is returned, when property does not exist', () => {
     expect(questionToAnswer('something')).toEqual(42)
+  })
+
+  test('default value is returned, when default value is falsy', () => {
+    expect(questionToAnswerFalsyDefault('something')).toEqual('')
   })
 
   test('no default value is returned when none is defined', () => {

@@ -1,9 +1,9 @@
 {
   "name": "callable-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "make your data callable",
   "scripts": {
-    "test": "jest",
+    "test": "npx jest",
     "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && ./fixup"
   },
   "keywords": [
